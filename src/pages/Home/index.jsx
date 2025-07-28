@@ -895,27 +895,35 @@ const Home = () => {
                   
                   <div className="flex flex-col justify-start items-center w-full mr-3 lg:mr-4 ml-3 lg:ml-4">
                     <div className="flex flex-col justify-start items-center w-full">
-                      <div className="flex flex-row justify-between items-center w-full ml-2 lg:ml-3">
-                        <img 
-                          src="/images/10.png" 
-                          alt="Seed Fund Logo" 
-                          className="w-[74px] h-[56px]"
-                        />
-                        <img 
-                          src="/images/img_item_nabventures.png" 
-                          alt="NAB Ventures Logo" 
-                           className="w-[74px] h-[56px]"
-                        />
-                        <img 
-                          src="/images/11.png" 
-                          alt="InSpace Logo" 
-                          className="w-[74px] h-[56px]"
-                        />
-                        <img 
-                          src="/images/12.png" 
-                          alt="InSpace Logo" 
-                          className="w-[74px] h-[56px]"
-                        />
+                      <div className="w-full overflow-hidden relative" style={{ height: '56px' }}>
+                        <style>{`
+                          @keyframes logoMarqueeLeft {
+                            0% { transform: translateX(0); }
+                            100% { transform: translateX(-50%); }
+                          }
+                        `}</style>
+                        <div
+                          className="flex flex-row items-center w-max"
+                          style={{
+                            animation: 'logoMarqueeLeft 16s linear infinite',
+                            minWidth: '200%',
+                          }}
+                        >
+                          {/* Logos Row */}
+                          <div className="flex flex-row justify-between items-center ml-2 lg:ml-3">
+                            <img src="/images/10.png" alt="Seed Fund Logo" className="w-[74px] h-[56px]" />
+                            <img src="/images/img_item_nabventures.png" alt="NAB Ventures Logo" className="w-[74px] h-[56px]" />
+                            <img src="/images/11.png" alt="InSpace Logo" className="w-[74px] h-[56px]" />
+                            <img src="/images/12.png" alt="InSpace Logo" className="w-[74px] h-[56px]" />
+                          </div>
+                          {/* Duplicate for seamless marquee */}
+                          <div className="flex flex-row justify-between items-center ml-2 lg:ml-3">
+                            <img src="/images/10.png" alt="Seed Fund Logo" className="w-[74px] h-[56px]" />
+                            <img src="/images/img_item_nabventures.png" alt="NAB Ventures Logo" className="w-[74px] h-[56px]" />
+                            <img src="/images/11.png" alt="InSpace Logo" className="w-[74px] h-[56px]" />
+                            <img src="/images/12.png" alt="InSpace Logo" className="w-[74px] h-[56px]" />
+                          </div>
+                        </div>
                       </div>
                       
                       <div className="flex flex-row gap-6 lg:gap-[30px] justify-center items-center mt-6 lg:mt-[34px]">
